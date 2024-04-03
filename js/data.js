@@ -4,6 +4,7 @@ export const contacts = [
             name: 'Michele',
             avatar: './img/avatar_1.jpg',
             visible: true,
+            id: 1,
             messages: [
                 {
                     date: '10/01/2020 15:30:55',
@@ -26,6 +27,7 @@ export const contacts = [
             name: 'Fabio',
             avatar: './img/avatar_2.jpg',
             visible: true,
+            id: 2,
             messages: [
                 {
                     date: '20/03/2020 16:30:00',
@@ -48,6 +50,7 @@ export const contacts = [
             name: 'Samuele',
             avatar: './img/avatar_3.jpg',
             visible: true,
+            id: 3,
             messages: [
                 {
                     date: '28/03/2020 10:10:40',
@@ -70,6 +73,7 @@ export const contacts = [
             name: 'Alessandro B.',
             avatar: './img/avatar_4.jpg',
             visible: true,
+            id: 4,
             messages: [
                 {
                     date: '10/01/2020 15:30:55',
@@ -87,6 +91,7 @@ export const contacts = [
             name: 'Alessandro L.',
             avatar: './img/avatar_5.jpg',
             visible: true,
+            id: 5,
             messages: [
                 {
                     date: '10/01/2020 15:30:55',
@@ -104,6 +109,7 @@ export const contacts = [
             name: 'Claudia',
             avatar: './img/avatar_6.jpg',
             visible: true,
+            id: 6, 
             messages: [
                 {
                     date: '10/01/2020 15:30:55',
@@ -126,6 +132,7 @@ export const contacts = [
             name: 'Federico',
             avatar: './img/avatar_7.jpg',
             visible: true,
+            id: 7,
             messages: [
                 {
                     date: '10/01/2020 15:30:55',
@@ -143,6 +150,7 @@ export const contacts = [
             name: 'Davide',
             avatar: './img/avatar_8.jpg',
             visible: true,
+            id: 8,
             messages: [
                 {
                     date: '10/01/2020 15:30:55',

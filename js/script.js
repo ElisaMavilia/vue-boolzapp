@@ -7,10 +7,13 @@ createApp({
         return {
             contacts: contacts,
             time: "12:30",
-            lastMessage: "Ultimo messaggio inviato"
+            lastMessage: "Ultimo messaggio inviato",
+            userActiveId: 1
         }
     },
     methods:{
+        
+
         
        
     },

@@ -32,16 +32,16 @@
             <div class="user-banner bg-primary-subtle">notifiche</div>
             <div id="search-bar" class="bg-white">barra di ricerca</div>
             <div id="contacts" class="overflow-y-auto bg-white ">
-              <div class="user-contact d-flex justify-content-between align-items-center ">
-                    <div class="container-fluid h-100">
-                        <div class="row h-100" v-for="(contacts, index) in contacts":key='index'>
-                             <div class="user-img col-3 h-100 pt-3">
+              <div class="user-contact d-flex justify-content-between align-items-center " >
+                    <div class="container-fluid h-100" >
+                        <div class="row h-100 bg-white overflow-y-scroll"  v-for="(contacts, index) in contacts":key='index'>
+                             <div class="user-img col-3 h-100 pt-3" :class="{'active': contacts.id === userActiveId}">
                                <img :src="contacts.avatar" :alt="contacts.name">
                              </div>
-                            <div class="user-msg col-6 h-100 pt-3">{{contacts.name}}
-                                <div class="user-text">{{lastMessage}}</div>
+                            <div class="user-msg col-6 h-100 pt-3" :class="{'active': contacts.id === userActiveId}">{{contacts.name}}
+                                <div class="user-text" :class="{'active': contacts.id === userActiveId}">{{lastMessage}}</div>
                             </div>
-                            <div class="user-text user-date col-3 h-100 pt-3">{{time}}</div>
+                            <div class="user-text user-date col-3 h-100 pt-3":class="{'active': contacts.id === userActiveId}">{{time}}</div>
 
                         </div>
                      </div>
