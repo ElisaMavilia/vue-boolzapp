@@ -5,7 +5,9 @@ const {createApp} = Vue;
 createApp({
     data(){
         return {
-            contacts: contacts
+            contacts: contacts,
+            time: "12:30",
+            lastMessage: "Ultimo messaggio inviato"
         }
     },
     methods:{
