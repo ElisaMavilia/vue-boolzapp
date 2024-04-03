@@ -5,7 +5,7 @@
 }
 
 .user-banner{
-    height: 7%;
+    height: 70px;
 }
 
 #chat{
@@ -13,16 +13,16 @@
 }
 
 #search-bar{
-    height: 4%;
+    height: 50px;
 }
 
 #contacts {
-    height: 82%;
+    height: calc(100% - 120px);
 }
-
+/* 
 .user-contact {
-    height: 10%;
-}
+    height: 80px;
+} */
 
 /* Left bar */
 
@@ -37,6 +37,6 @@
     color: grey;
 }
 
-.active{
+.active-user{
     background-color: lightgrey;
 }
