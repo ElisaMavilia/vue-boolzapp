@@ -31,7 +31,7 @@
             </div>
             <div class="user-banner bg-primary-subtle">notifiche</div>
             <div id="search-bar" class="bg-white">barra di ricerca</div>
-            <div id="contacts" class="overflow-y-auto bg-white container-fluid">
+            <div id="contacts" class="overflow-y-auto bg-white container-fluid user-contact">
                     <div class="row bg-white overflow-y-scroll" v-for="(contacts, index) in contacts":key='index'>
                         <div class="user-img col-3 h-100 pt-3" :class="{'active': contacts.id === userActiveId}">
                                <img :src="contacts.avatar" :alt="contacts.name">
@@ -41,8 +41,6 @@
                             </div>
                             <div class="user-text user-date col-3 h-100 pt-3":class="{'active': contacts.id === userActiveId}">{{time}}</div>
                     </div>
-            
-                 
             </div>
           </div>
           <div class="col-8 bg-success-subtle h-100 px-0 border-dark-subtle border-start">
