@@ -33,14 +33,16 @@
             <div id="search-bar" class="bg-white">barra di ricerca</div>
             <div id="contacts" class="overflow-y-auto">
               <div class="user-contact d-flex justify-content-between align-items-center">
-                <div class="container-fluid h-100">
-                  <div class="row h-100">
-                    <div class="user-img col-3 h-100">img</div>
-                    <div class="user-msg col-6 h-100">msg</div>
-                    <div class="user-date col-3 h-100">date</div>
-                  </div>
-                </div>
-              </div>
+                    <div class="container-fluid h-100">
+                        <div class="row h-100" v-for="(contacts, index) in contacts":key='index'>
+                             <div class="user-img col-3 h-100">
+                               <img :src="contacts.avatar" :alt="contacts.name">
+                             </div>
+                            <div class="user-msg col-6 h-100">msg</div>
+                            <div class="user-date col-3 h-100">date</div>
+                        </div>
+                     </div>
+                 </div>
             </div>
           </div>
           <div class="col-8 bg-success-subtle h-100 px-0 border-dark-subtle border-start">
