@@ -70,11 +70,11 @@
                 <div class="d-flex p-3" v-for="(msg, index) in activeContact.messages">
                     <div class="message" :class="msg.status">
                       <div>{{msg.message}}</div> 
-                      <span>{{msg.date}}</span>
-                </div>
+                      <small>{{msg.date}}</small>
+                    </div>
                 </div>
             </div>
-            <div id="send-message"  class="user-banner">invio messaggio</div>
+            <div id="send-message"  class="user-banner"></div>
           </div>
         </div>
   

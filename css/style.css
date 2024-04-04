@@ -84,13 +84,16 @@
 .message{
     width: 300px;
     border-radius: 10px;
+    padding: 10px 20px;
 }
 
-.sent{
+
+.received{
     background-color: white;
 }
 
-.received{
+.sent{
     background-color: #d5f9ba;
+    margin-left: auto;
     
 }
