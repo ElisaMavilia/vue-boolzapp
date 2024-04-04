@@ -43,6 +43,7 @@
 #chat{
     height: calc(100% - 140px);
     background-image: url ("img/mine.jpg");
+    background-size: cover;
 }
 
 #search-bar{
@@ -63,7 +64,7 @@
 
 /* Left bar */
 
-#left-img img, .user-img img{
+#left-img img, .user-img img, .user-banner img{
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -79,3 +80,16 @@
 }
 
 /* chat */
+
+.message{
+    width: 300px;
+    border-radius: 10px;
+}
+
+.sent{
+    background-color: white;
+}
+
+.received{
+    background-color: #d5f9ba;
+}

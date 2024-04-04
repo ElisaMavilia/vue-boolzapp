@@ -46,20 +46,35 @@
                   </div>
             </div>
             <div id="contacts" class="overflow-y-auto container-fluid user-contact bg-white">
-                    <div class="contact row overflow-y-scroll" :class="{'active': activeUserId === contact.id}" v-for="(contact, index) in contacts" :key='contact.id'>
-                        <div class="user-img col-3 h-100 pt-3">
+                    <div class="contact row overflow-y-scroll" :class="{'active': activeUserId === contact.id}" v-for="(contact, index) in contacts" :key='contact.id'
+                    @click="setActiveUser(contact.id)">
+                        <div class="user-img col-3 h-100 pt-3 pb-3">
                                <img :src="contact.avatar" :alt="contact.name">
                              </div>
                             <div class="user-msg col-6 h-100 pt-3">{{contact.name}}
                                 <div class="user-text">{{lastMessage}}</div>
                             </div>
                             <div class="ms-auto user-text user-date col-3 h-100 pt-3">{{time}}</div>
+                         </div>
                     </div>
-            </div>
           </div>
-          <div class="col-8 h-100 px-0 border-dark-subtle border-start">
-            <div class="user-banner">dati contatto</div>
-            <div id="chat" class="overflow-y-auto">ciao
+          <div id="chat-wrapper" class="col-8 h-100 px-0 border-dark-subtle border-start">
+                <div class="user-banner d-flex align-items-center">
+                    <img :src="'./' + activeContact.avatar" :alt="activeContact.name" class="mt-3 ms-3 me-3">
+                    <div id="user-info">
+                        <h6>{{activeContact.name}}</h6>
+                    </div>
+                    <div class="d-flex" id="user-message">
+                        <small>{{lastMessage}}</small>
+                    </div>
+                </div>
+                <div id="chat" class="overflow-y-auto">
+                <div class="d-flex p-3" v-for="(msg, index) in activeContact.messages">
+                    <div class="message" :class="msg.status">
+                </div>
+              
+                    
+                </div>
             </div>
             <div id="send-message"  class="user-banner">invio messaggio</div>
           </div>
