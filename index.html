@@ -76,7 +76,7 @@
             </div>
             <div id="send-message" class="user-banner d-flex justify-content-between align-items-center align-content-center ">
                 <i class="fa-regular fa-face-smile"></i>
-                <input class="form-control form-control-lg" type="text" placeholder="Inserisci il messaggio">
+                <input class="form-control form-control-lg" v-model="userMessage" @keyup.enter="sendMessage()" type="text"        placeholder="Inserisci il messaggio">
                 <i class="fa-solid fa-microphone"></i>
             </div>
           </div>
