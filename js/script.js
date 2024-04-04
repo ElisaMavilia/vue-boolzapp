@@ -1,6 +1,7 @@
 import {contacts} from './data.js';
 
 const {createApp} = Vue;
+const dt = luxon.DateTime;
 
 createApp({
     data(){
@@ -8,12 +9,13 @@ createApp({
             contacts: contacts,
             time: "12:30",
             lastMessage: "Ultimo messaggio inviato",
-            userActiveId: 1
+            activeUserId: 1
         }
     },
     methods:{
-        
-
+        setActiveUser(id){
+            this.activeUserId = id;
+        }
         
        
     },
