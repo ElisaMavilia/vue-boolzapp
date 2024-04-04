@@ -26,8 +26,15 @@ createApp({
             }
             this.activeContact.messages.push(newMessage);
             this.userMessage = "";
+            setTimeout(()=>{
+                const contactAnswer = {
+                    date: dt.now().setLocale('it').toFormat('dd/MM/yyyy hh:mm:ss'),
+                message: 'ok!',
+                status: 'received'
+                }
+                this.activeContact.messages.push(contactAnswer);
+            },1000);
         }
-        
     },
     computed: {
         activeContact(id){
