@@ -27,10 +27,10 @@
                             <img class="me-2" src="img/avatar_io.jpg" alt="my picture">
                             Elisa
                         </div>
-                        <div id="right-icons" class="">
-                            <i class="fa-solid fa-circle-notch pe-2" style="color: #7a7a7a;"></i>
-                            <i class="fa-solid fa-message pe-2" style="color: #7a7a7a;"></i>
-                            <i class="fa-solid fa-ellipsis-vertical" style="color: #7a7a7a;"></i>
+                        <div id="right-icons" class="mt-1">
+                            <i class="fa-solid fa-circle-notch pe-2"></i>
+                            <i class="fa-solid fa-message pe-2"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
                     <!-- notification bar -->
@@ -38,13 +38,17 @@
                         <div class="rounded-icon mt-3 ms-3  pt-2">
                             <i class="fa-solid fa-bell-slash" style="color: #74C0FC;"></i>
                         </div>
-                        <span class="ms-3 mt-4"><small class="grey">Ricevi notifiche di nuovi messaggi</small></span>
+                        <div id="notification-text" class="ms-3 mt-3 d-flex flex-column">
+                            <small class="fs-6">Ricevi notifiche di nuovi messaggi</small>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
+                        
                     </div>
                     <!-- search bar -->
                     <div id="search-bar" class="bg-white">
                         <div class="input-group flex-nowrap pt-1 pb-1">
                             <span class="input-group-text bg-white" id="addon-wrapping"><i
-                                    class="fa-solid fa-magnifying-glass" style="color: #aaaaaa;"></i></span>
+                                    class="ps-1 fa-solid fa-magnifying-glass"></i></span>
                             <input type="text" class="form-control " placeholder="Cerca o inizia una nuova chat"
                                 aria-label="Username" aria-describedby="addon-wrapping" v-model="searchContact">
                         </div>
@@ -78,7 +82,9 @@
                         </div>
                         
                         <div id="rigth-banner-icons" class="d-flex ">
-                            <i class="fa-solid fa-magnifying-glass" style="color: #929292;"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
                     <!-- chat -->

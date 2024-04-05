@@ -46,6 +46,12 @@
     cursor: pointer;
 }
 
+.fa-magnifying-glass,.fa-paperclip,.fa-ellipsis-vertical,.fa-circle-notch,.fa-message{
+    padding-right: 25px;
+    font-size: 1.3em;
+    color: #7a7a7a;
+}
+
 /* input */
 ::placeholder{
     color: grey;
@@ -58,6 +64,13 @@
 
 #send-message{
     background-color: #f3eeeb ;
+}
+
+/* notification bar */
+#notification-text a{
+    text-decoration: none;
+    color: grey;
+    font-size: 0.8em;
 }
 
 /* contact list */
@@ -105,6 +118,15 @@
 #chat{
     height: calc(100% - 140px);
     background-image:url("./../img/mine.jpg");
+}
+
+.message div {
+    font-size: 1em;
+}
+
+.message small {
+    font-size: 0.8em;
+    color: grey;
 }
 
 #last-access{
