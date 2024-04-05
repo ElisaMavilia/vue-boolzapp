@@ -1,85 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/script.js" type="module"></script>
     <title>Boolzap</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="app" class="py-5">
-      <div class="container-xxl h-100 ">
-        <div class="row h-100">
-          <div class="col-4  h-100 px-0">
-            <div class="user-banner color-banner py-2 px-2 d-flex justify-content-between align-items-center">
-                <div id="left-img">
-                    <img class="me-2" src="img/avatar_io.jpg" alt="my picture">
-                    Elisa
-                </div>
-                <div id="right-icons" class="">
-                    <i class="fa-solid fa-circle-notch pe-2" style="color: #7a7a7a;"></i>
-                    <i class="fa-solid fa-message pe-2" style="color: #7a7a7a;"></i>
-                    <i class="fa-solid fa-ellipsis-vertical" style="color: #7a7a7a;"></i>
-                </div>
-            </div>
-            <div id="banner" class="user-banner d-flex ">
-                
-                    <div class="rounded-icon mt-3 ms-3  pt-2">
-                        <i class="fa-solid fa-bell-slash" style="color: #74C0FC;"></i>
+        <div class="container-xxl h-100 ">
+            <div class="row h-100">
+                <div class="col-4  h-100 px-0">
+                    <!-- user id bar -->
+                    <div class="user-banner color-banner py-2 px-2 d-flex justify-content-between align-items-center">
+                        <div id="left-img">
+                            <img class="me-2" src="img/avatar_io.jpg" alt="my picture">
+                            Elisa
+                        </div>
+                        <div id="right-icons" class="">
+                            <i class="fa-solid fa-circle-notch pe-2" style="color: #7a7a7a;"></i>
+                            <i class="fa-solid fa-message pe-2" style="color: #7a7a7a;"></i>
+                            <i class="fa-solid fa-ellipsis-vertical" style="color: #7a7a7a;"></i>
+                        </div>
                     </div>
-                    <span class="ms-3 mt-4" ><small class="grey">Ricevi notifiche di nuovi messaggi</small></span>
-            </div>
-            <div id="search-bar" class="bg-white">
-                <div class="input-group flex-nowrap pt-1 pb-1">
-                    <span class="input-group-text bg-white" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass" style="color: #aaaaaa;"></i></span>
-                    <input type="text" class="form-control " placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="addon-wrapping" v-model="searchContact">
-                  </div>
-            </div>
-            <div id="contacts" class="overflow-y-auto container-fluid user-contact bg-white">
-                    <div class="contact row overflow-y-scroll" :class="{'active': activeUserId === contact.id}" v-for="(contact, index) in searchContactLetter" :key='contact.id'
-                    @click="setActiveUser(contact.id)">
-                        <div class="user-img col-3 h-100 pt-3 pb-3">
-                               <img :src="contact.avatar" :alt="contact.name">
-                             </div>
+                    <!-- notification bar -->
+                    <div id="banner" class="user-banner d-flex ">
+                        <div class="rounded-icon mt-3 ms-3  pt-2">
+                            <i class="fa-solid fa-bell-slash" style="color: #74C0FC;"></i>
+                        </div>
+                        <span class="ms-3 mt-4"><small class="grey">Ricevi notifiche di nuovi messaggi</small></span>
+                    </div>
+                    <!-- search bar -->
+                    <div id="search-bar" class="bg-white">
+                        <div class="input-group flex-nowrap pt-1 pb-1">
+                            <span class="input-group-text bg-white" id="addon-wrapping"><i
+                                    class="fa-solid fa-magnifying-glass" style="color: #aaaaaa;"></i></span>
+                            <input type="text" class="form-control " placeholder="Cerca o inizia una nuova chat"
+                                aria-label="Username" aria-describedby="addon-wrapping" v-model="searchContact">
+                        </div>
+                    </div>
+                    <!-- contact list -->
+                    <div id="contacts" class="overflow-y-auto container-fluid user-contact bg-white">
+                        <div class="contact row overflow-y-scroll" :class="{'active': activeUserId === contact.id}"
+                            v-for="(contact, index) in searchContactLetter" :key='contact.id'
+                            @click="setActiveUser(contact.id)">
+                            <div class="user-img col-3 h-100 pt-3 pb-3">
+                                <img :src="contact.avatar" :alt="contact.name">
+                            </div>
                             <div class="user-msg col-6 h-100 pt-3">{{contact.name}}
-                                <div class="user-text">{{lastMessage}}</div>
+                                <div class="user-text">Ultimo messaggio</div>
                             </div>
                             <div class="ms-auto user-text user-date col-3 h-100 pt-3">{{time}}</div>
-                         </div>
-                    </div>
-          </div>
-          <div id="chat-wrapper" class="col-8 h-100 px-0 border-dark-subtle border-start">
-                <div class="user-banner d-flex align-items-center">
-                    <img :src="'./' + activeContact.avatar" :alt="activeContact.name" class="mt-3 ms-3 me-3">
-                    <div id="user-info">
-                        <h6>{{activeContact.name}}</h6>
-                        <small>{{lastMessage}} {{lastAccess}}</small>
+                        </div>
                     </div>
                 </div>
+                <!-- chat section -->
+                <div id="chat-wrapper" class="col-8 h-100 px-0">
+                    <!-- active contact banner -->
+                    <div class="user-banner d-flex align-items-center">
+                        <img :src="'./' + activeContact.avatar" :alt="activeContact.name" class="mt-3 ms-3 me-3">
+                        <div id="user-info">
+                            <h6>{{activeContact.name}}</h6>
+                            <small>{{lastMessage}} {{lastAccess}}</small>
+                        </div>
+                        <div id="rigth-banner-icons" class="d-flex align-self-end ">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #929292;"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- chat -->
                 <div id="chat" class="overflow-y-auto">
-                <div class="d-flex p-3" v-for="(msg, index) in activeContact.messages">
-                    <div class="message" :class="msg.status">
-                      <div>{{msg.message}}</div> 
-                      <small>{{msg.date}}</small>
+                    <div class="d-flex p-3" v-for="(msg, index) in activeContact.messages">
+                        <div class="message" :class="msg.status">
+                            <div>{{msg.message}}</div>
+                            <small>{{msg.date}}</small>
+                        </div>
                     </div>
                 </div>
+                <!-- send message bar -->
+                <div id="send-message"
+                    class="user-banner d-flex justify-content-between align-items-center align-content-center ">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input class="form-control form-control-lg" v-model="userMessage" @keyup.enter="sendMessage()"
+                        type="text" placeholder="Inserisci il messaggio">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
             </div>
-            <div id="send-message" class="user-banner d-flex justify-content-between align-items-center align-content-center ">
-                <i class="fa-regular fa-face-smile"></i>
-                <input class="form-control form-control-lg" v-model="userMessage" @keyup.enter="sendMessage()" type="text"        placeholder="Inserisci il messaggio">
-                <i class="fa-solid fa-microphone"></i>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </body>
-  
+    </div>
+</body>

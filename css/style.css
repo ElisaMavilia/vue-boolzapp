@@ -3,16 +3,8 @@
     color: grey;
  }
 
-#app {
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(180deg,#009688 20%, #DADBD3 20%);
-}
-.color-banner{
+ .color-banner{
     background-color: #EAEAEA;
-}
-.user-banner{
-    height: 70px;
 }
 .container-xxl{
     background-color: #EAEAEA;
@@ -22,6 +14,18 @@
     background-color: #8ed9fc;
 }
 
+/* general */
+#app {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg,#009688 20%, #DADBD3 20%);
+}
+
+.user-banner{
+    height: 70px;
+}
+
+/* icons */
 .fa-bell-slash{
     font-size: 1.5em;
 }
@@ -33,16 +37,19 @@
     vertical-align: middle;
     text-align: center;
 }
+
+.fa-face-smile, .fa-microphone{
+    font-size: 1.5em;
+    color: gray;
+    margin-left: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* input */
 ::placeholder{
     color: grey;
     font-size: 0.8em;
-}
-
-
-#chat{
-    height: calc(100% - 140px);
-    background-image: url ("img/mine.jpg");
-    background-size: cover;
 }
 
 #search-bar{
@@ -53,6 +60,7 @@
     background-color: #f3eeeb ;
 }
 
+/* contact list */
 #contacts {
     height: calc(100% - 190px);
     cursor: pointer;
@@ -63,7 +71,6 @@
 }
 
 /* Left bar */
-
 #left-img img, .user-img img, .user-banner img{
     width: 60px;
     height: 60px;
@@ -80,6 +87,15 @@
 }
 
 /* chat */
+#chat{
+    height: calc(100% - 140px);
+    background-image:url("img/mine.jpg");
+}
+
+#last-access{
+    font-size: 0.8em;
+    color: grey;
+}
 
 .message{
     width: 300px;
@@ -96,13 +112,4 @@
     background-color: #d5f9ba;
     margin-left: auto;
     
-}
-
-/* User banner */
-.fa-face-smile, .fa-microphone{
-    font-size: 1.5em;
-    color: gray;
-    margin-left: 20px;
-    margin-right: 10px;
-    cursor: pointer;
 }
