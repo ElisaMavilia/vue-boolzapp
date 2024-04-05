@@ -89,7 +89,7 @@
 /* chat */
 #chat{
     height: calc(100% - 140px);
-    background-image:url("img/mine.jpg");
+    background-image:url("./../img/mine.jpg");
 }
 
 #last-access{
