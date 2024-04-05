@@ -36,17 +36,15 @@
                         <i class="fa-solid fa-bell-slash" style="color: #74C0FC;"></i>
                     </div>
                     <span class="ms-3 mt-4" ><small class="grey">Ricevi notifiche di nuovi messaggi</small></span>
-        
             </div>
-            
             <div id="search-bar" class="bg-white">
                 <div class="input-group flex-nowrap pt-1 pb-1">
                     <span class="input-group-text bg-white" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass" style="color: #aaaaaa;"></i></span>
-                    <input type="text" class="form-control " placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="addon-wrapping">
+                    <input type="text" class="form-control " placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="addon-wrapping" v-model="searchContact">
                   </div>
             </div>
             <div id="contacts" class="overflow-y-auto container-fluid user-contact bg-white">
-                    <div class="contact row overflow-y-scroll" :class="{'active': activeUserId === contact.id}" v-for="(contact, index) in contacts" :key='contact.id'
+                    <div class="contact row overflow-y-scroll" :class="{'active': activeUserId === contact.id}" v-for="(contact, index) in searchContactLetter" :key='contact.id'
                     @click="setActiveUser(contact.id)">
                         <div class="user-img col-3 h-100 pt-3 pb-3">
                                <img :src="contact.avatar" :alt="contact.name">
@@ -81,7 +79,6 @@
             </div>
           </div>
         </div>
-  
       </div>
     </div>
   </body>

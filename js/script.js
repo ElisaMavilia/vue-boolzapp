@@ -10,7 +10,8 @@ createApp({
             time: "12:30",
             lastMessage: "Ultimo accesso ",
             activeUserId: 1,
-            userMessage: ''
+            userMessage: '',
+            searchContact: ''
             
         }
     },
@@ -41,6 +42,11 @@ createApp({
         activeContact(id){
             return this.contacts.find((el)=> el.id === this.activeUserId);
         },
+
+        searchContactLetter(){
+            return this.contacts.filter((el)=> el.name.toLowerCase().includes(this.searchContact));
+        },
+
         lastAccess(){
             const index = this.activeContact.messages.length - 1;
             return this.activeContact.messages[index].date;
