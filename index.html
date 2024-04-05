@@ -67,12 +67,16 @@
                 <!-- chat section -->
                 <div id="chat-wrapper" class="col-8 h-100 px-0">
                     <!-- active contact banner -->
-                    <div class="user-banner d-flex align-items-center ">
-                        <img :src="'./' + activeContact.avatar" :alt="activeContact.name" class="mt-3 ms-3 me-3">
-                        <div id="user-info">
-                            <h6>{{activeContact.name}}</h6>
-                            <small>{{lastMessage}} {{lastAccess}}</small>
+                    <div class="user-banner d-flex align-items-center justify-content-between" id="active-contact-banner">
+                        <div class="left-banner d-flex align-content-center align-items-center">
+                            <img :src="'./' + activeContact.avatar" :alt="activeContact.name" class="mt-1 ms-3 me-3">
+                            <div id="user-info" class="mt-1">
+                                <h6>{{activeContact.name}}</h6>
+                                <small class="mb-2">{{lastMessage}} {{lastAccess}}</small>
+                               
+                            </div>
                         </div>
+                        
                         <div id="rigth-banner-icons" class="d-flex ">
                             <i class="fa-solid fa-magnifying-glass" style="color: #929292;"></i>
                         </div>
