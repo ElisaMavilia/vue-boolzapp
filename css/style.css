@@ -13,7 +13,6 @@
 }
 .user-banner{
     height: 70px;
-    
 }
 .container-xxl{
     background-color: #EAEAEA;
@@ -56,6 +55,7 @@
 
 #contacts {
     height: calc(100% - 190px);
+    cursor: pointer;
 }
 
 .user-contact {

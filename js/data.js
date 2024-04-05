@@ -1,7 +1,7 @@
 export const contacts = [
    
         {
-            name: 'Michele',
+            name: 'Nima',
             avatar: './img/avatar_1.jpg',
             visible: true,
             id: 1,
@@ -106,14 +106,14 @@ export const contacts = [
             ],
         },
         {
-            name: 'Claudia',
+            name: 'Marina',
             avatar: './img/avatar_6.jpg',
             visible: true,
             id: 6, 
             messages: [
                 {
                     date: '10/01/2020 15:30:55',
-                    message: 'Ciao Claudia, hai novità?',
+                    message: 'Ciao Marina, hai novità?',
                     status: 'sent'
                 },
                 {

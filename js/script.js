@@ -8,9 +8,10 @@ createApp({
         return {
             contacts: contacts,
             time: "12:30",
-            lastMessage: "Ultimo messaggio",
+            lastMessage: "Ultimo accesso ",
             activeUserId: 1,
             userMessage: ''
+            
         }
     },
     methods:{
@@ -39,8 +40,11 @@ createApp({
     computed: {
         activeContact(id){
             return this.contacts.find((el)=> el.id === this.activeUserId);
+        },
+        lastAccess(){
+            const index = this.activeContact.messages.length - 1;
+            return this.activeContact.messages[index].date;
         }
-       
     },
 
     mounted(){
