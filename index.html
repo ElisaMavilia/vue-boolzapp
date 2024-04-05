@@ -24,7 +24,7 @@
                     <!-- user id bar -->
                     <div class="user-banner color-banner py-2 px-2 d-flex justify-content-between align-items-center">
                         <div id="left-img">
-                            <img class="me-2" src="img/avatar_io.jpg" alt="my picture">
+                            <img class="me-2" src="img/foto.jpg" alt="my picture">
                             Elisa
                         </div>
                         <div id="right-icons" class="mt-1">
@@ -55,7 +55,7 @@
                     </div>
                     <!-- contact list -->
                     <div id="contacts" class="overflow-y-auto container-fluid user-contact bg-white">
-                        <div class="contact row overflow-y-scroll" :class="{'active': activeUserId === contact.id}"
+                        <div class="contact row" :class="{'active': activeUserId === contact.id}"
                             v-for="(contact, index) in searchContactLetter" :key='contact.id'
                             @click="setActiveUser(contact.id)">
                             <div class="user-img col-3 h-100 pt-3 pb-3">

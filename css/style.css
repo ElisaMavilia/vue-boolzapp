@@ -87,6 +87,10 @@
     height: 80px;
 }
 
+.contact{
+    border-bottom: 1px solid lightgrey;
+}
+
 /* Left bar */
 #left-img img, .user-img img, .user-banner img{
     width: 50px;
